@@ -16,22 +16,22 @@ if len(sys.argv) == 3:
     for user in connections_new['followers']:
         follower_new.append(user)
 
-    found_unfollower = False
-    found_overall = False
+    found_still_following = False
+    found_overall_unfollower = False
     print("Users that followed you before, but now stopped to follow you:")
     for a, val in enumerate(follower_old):
         for b, val in enumerate(follower_new):
                 if follower_old[a]==follower_new[b]:
-                        found_unfollower = True
+                        found_still_following = True
                         break
-        if not found_unfollower:
-                found_overall = True
+        if not found_still_following:
+                found_overall_unfollower = True
                 print follower_old[a]
                 continue
         else:
-                found_unfollower = False
+                found_still_following = False
 
-    if not found_overall:
+    if not found_overall_unfollower:
         print("It looks like your friends like you. Nobody has unfollowed you!")
  except FileNotFoundError:
       sys.exit("At least one of your files does not exist")
