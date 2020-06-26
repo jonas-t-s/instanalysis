@@ -18,3 +18,11 @@ Scripts located in `scripts/python`
 #### Who doesn't follow me back?
 `<connections.json>` is a path to your connections.json file from your data download
 Usage: `python no_followback.py <connections.json>`
+#### Who stopped following me?
+For this operation you need two JSON-Files. One file, that you downloader earlier before and one that is up to date. 
+'<connections_old.json>' is the path to the out-dated 'connections.json' file from your data download.
+'<connections_new.json>' is the path to the newer 'connections.json' file from your data download. 
+
+Usage: 
+'python missing_followers.py <connections_old.json> <connections_new.json>'
+
