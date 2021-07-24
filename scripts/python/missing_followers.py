@@ -35,6 +35,6 @@ if len(sys.argv) == 3:
 		print("Please note, that these people also could have changed their username and therefore those people could also "
 			  "false positives, but luckily a simple search on the platform will allow you to test it.")
 else:
-	print('correct usage: python missing_followers.py <connections_old.json> <connections_new.json>')
+	print('correct usage: python missing_followers.py <connections_old.json> <connections_new.json> OR python missing_followers.py <followers_old.json> <followers_new.json>')
 
 

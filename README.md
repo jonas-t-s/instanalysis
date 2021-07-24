@@ -24,5 +24,5 @@ For this operation you need two JSON-Files. One file, that you downloader earlie
 `<connections_new.json>` is the path to the newer `connections.json` file from your data download. 
 
 Usage: 
-`python missing_followers.py <connections_old.json> <connections_new.json>`
-
+The old format: `python missing_followers.py <connections_old.json> <connections_new.json>`
+The new followerformat: `python missing_followers.py <followers_old.json> <following_new.json>`
