@@ -1,4 +1,5 @@
 import json
+import pprint
 import sys
 import follfileinterpreter
 """
@@ -33,8 +34,11 @@ if len(sys.argv) == 2 or len(sys.argv) == 3:
         followingjson = json.load(followingfile)
         followers = follfileinterpreter.followerfileinterpreter(followerjson)
         following = follfileinterpreter.followingfileinterpreter(followingjson)
-        print("Your followers that you do not follow back:", set(followers).difference(following))
-        print("Users you follow that do not follow you back", set(following).difference(followers))
-
+        #print("Your followers that you do not follow back:", set(followers).difference(following))
+        pprint.pprint("Your followers that you do not follow back:")
+        pprint.pprint(set(followers).difference(following))
+        #print("Users you follow that do not follow you back", set(following).difference(followers))
+        pprint.pprint("Users you follow that do not follow you back")
+        pprint.pprint(set(following).difference(followers))
 else:
     print('Correct usage: python no_followback.py <connections.json> OR python no_followback.py <followers.json> <following.json>')

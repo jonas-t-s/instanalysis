@@ -7,7 +7,7 @@ from follfileinterpreter import followerfileinterpreter
 
 """ 
 In this file we analyse, if there are missing followers, which are no more following. 
-Due to the limit of the data export, it may have false positives when an user changes it username. 
+Due to the limit of the data export, it may have false positives when an user changes its username. 
 """
 if len(sys.argv) == 3:
 	print("Old:", sys.argv[1])
@@ -31,7 +31,10 @@ if len(sys.argv) == 3:
 	if len(set(followerold).difference(followernew)) == 0:
 		print("It looks like your friends like you. There is no unfollower!")
 	else:
-		print("Users that followed you before, but now stopped to follow you:", (set(followerold).difference(followernew)));
+		import pprint
+		# print("Users that followed you before, but now stopped to follow you:", (set(followerold).difference(followernew)));
+		pprint.pprint("Users that followed you before, but now stopped to follow you:")
+		pprint.pprint(set(followerold).difference(followernew))
 		print("Please note, that these people also could have changed their username and therefore those people could also "
 			  "false positives, but luckily a simple search on the platform will allow you to test it.")
 else:
