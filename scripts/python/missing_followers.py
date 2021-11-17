@@ -36,7 +36,7 @@ if len(sys.argv) == 3:
 		pprint.pprint("Users that followed you before, but now stopped to follow you:")
 		pprint.pprint(set(followerold).difference(followernew))
 		print("Please note, that these people also could have changed their username and therefore those people could also "
-			  "false positives, but luckily a simple search on the platform will allow you to test it.")
+			  "be false positives, but luckily a simple search on the platform will allow you to test it.")
 else:
 	print('correct usage: python missing_followers.py <connections_old.json> <connections_new.json> OR python missing_followers.py <followers_old.json> <followers_new.json>')
 
