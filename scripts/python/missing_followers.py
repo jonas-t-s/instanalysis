@@ -15,7 +15,7 @@ if len(sys.argv) == 3:
 	json_file_old = open(sys.argv[1])
 	connectionsold = json.load(json_file_old)
 	# if the user gives us an old connectionsfile, we interpret it using the old format, else we interpret it in the new format
-	if "connections" in sys.argv[1]:
+	if "connections" in sys.argv[1] and False: # Deactivate the old interpreter as the format changed again
 		followerold = []
 		for key in connectionsold['followers'].keys():
 			followerold.append(key)
